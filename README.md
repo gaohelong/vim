@@ -2,6 +2,15 @@
 vim前端、后端插件.
 
 ```javascript
+1、将下面的配置文件拷入~/.vimrc
+2、安装https://github.com/junegunn/vim-plug
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+3、进入vim
+  shift+:输入PlugInstall回车, 会自动导入~/.vimrc中设置的插件
+```
+
+```javascript
 "设置环境变量(所有插件都可以这样引用).
 set runtimepath^=~/.vim/bundle/ag "引入ag
 set runtimepath^=~/.vim/bundle/vim-airline-themes "引入ariline-themes
@@ -142,4 +151,26 @@ let g:multi_cursor_quit_key='<Esc>'
 "let g:multi_cursor_start_word_key='g<C-n>'
 nnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
 vnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+```
+
+```html
+------------------------------------------------------------
+多窗口切换快捷键：ctrl + ww
+------------------------------------------------------------
+◎ vsp(纵屏).
+----------------
+:vsp 文件名
+------
+例如：
+------
+:vsp member.php
+------------------------------------------------------------
+◎ new(横屏).
+----------------
+:new 文件名
+------
+例如：
+------
+:new member.php
+------------------------------------------------------------
 ```
